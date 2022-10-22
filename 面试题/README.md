@@ -1,8 +1,6 @@
 ### 浏览器
 
-#### 浏览器跨域
-
-[浏览器跨域](https://febook.hzfe.org/awesome-interview/book1/browser-cross-origin)
+#### [浏览器跨域](https://febook.hzfe.org/awesome-interview/book1/browser-cross-origin)
 
 - 浏览器的安全机制
 - 同源策略
@@ -11,29 +9,27 @@
 - proxy
 - Nginx
 
-#### 浏览器的回流重绘
-
-[浏览器的回流重绘](https://febook.hzfe.org/awesome-interview/book1/browser-repain-reflow)
+#### [浏览器的回流重绘](https://febook.hzfe.org/awesome-interview/book1/browser-repain-reflow)
 
 - 解析HTML
 
 - DOM
-
-- bytes
-
-- tag
-
-- tokens
-
-- node
-
-- dom
+  
+  - bytes
+  
+  - tag
+  
+  - tokens
+  
+  - node
+  
+  - dom
 
 - CSSOM
-
-- AST
-
-- 递归
+  
+  - AST
+  
+  - 递归
 
 - render
 
@@ -72,13 +68,9 @@
 - GPU 加速
 - 布局信息缓存
 
-#### 浏览器渲染机制
+#### [浏览器渲染机制](https://febook.hzfe.org/awesome-interview/book2/browser-render-mechanism)
 
-[浏览器渲染机制](https://febook.hzfe.org/awesome-interview/book2/browser-render-mechanism)
-
-#### 浏览器事件循环
-
-[浏览器事件循环](https://febook.hzfe.org/awesome-interview/book3/browser-event-loop)
+#### [浏览器事件循环](https://febook.hzfe.org/awesome-interview/book3/browser-event-loop)
 
 - 宏任务
 - 微任务
@@ -86,9 +78,7 @@
 - 任务队列
 - webAPI
 
-#### node事件循环
-
-[node事件循环](https://www.bilibili.com/video/BV13A4y1Q7N5?vd_source=d9def7d2250301f0cacc4e2d80d9fffa)
+#### [node事件循环](https://www.bilibili.com/video/BV13A4y1Q7N5?vd_source=d9def7d2250301f0cacc4e2d80d9fffa)
 
 - 异步模块
 - NextTick
@@ -97,18 +87,14 @@
 - Pola
 - Check
 
-#### 如何定位内存泄漏
-
-[如何定位内存泄漏](https://febook.hzfe.org/awesome-interview/book3/browser-memory-leaks)
+#### [如何定位内存泄漏](https://febook.hzfe.org/awesome-interview/book3/browser-memory-leaks)
 
 - 闭包
 - 垃圾回收
 - 引用
 - 谷歌开发者工具
 
-#### HTTP/HTTPS
-
-[HTTP/HTTPS](https://juejin.cn/post/6844904038509576199)
+#### [HTTP/HTTPS](https://juejin.cn/post/6844904038509576199)
 
 - 对称性
 
@@ -124,29 +110,29 @@
 
 - 数字证书
 
-[前端路由实现](https://febook.hzfe.org/awesome-interview/book4/browser-router)
+#### [前端路由实现](https://febook.hzfe.org/awesome-interview/book4/browser-router)
 
 - SPA
-
-- Hash
-
-- 兼容性好
-
-- 锚点冲突
-
-- 不利于 SEO
-
-- hash 值不会传给服务器
-
-- History
-
-- SEO 相对 Hash 要好
-
-- 服务端可获取完整的链接和参数
-
-- 兼容差一点
-
-- 需要服务端配置
+  
+  - Hash
+    
+    - 兼容性好
+    
+    - 锚点冲突
+    
+    - 不利于 SEO
+    
+    - hash 值不会传给服务器
+  
+  - History
+    
+    - SEO 相对 Hash 要好
+    
+    - 服务端可获取完整的链接和参数
+    
+    - 兼容差一点
+    
+    - 需要服务端配置
 
 前端路由优缺点：
 
@@ -155,33 +141,29 @@
 - 首次加载长
 - SEO 不佳
 
-#### 本地存储方式及场景
-
-[本地存储方式及场景](https://febook.hzfe.org/awesome-interview/book4/browser-local-storage)
+#### [本地存储方式及场景](https://febook.hzfe.org/awesome-interview/book4/browser-local-storage)
 
 - cookie
-
-- 4K
-
-- 随请求发送服务端
-
-- 可以设置失效时间
+  
+  - 4K
+  
+  - 随请求发送服务端
+  
+  - 可以设置失效时间
 
 - localStorage
-
-- 5M
+  
+  - 5M
 
 - sessionStorage
-
-- 5M
+  
+  - 5M
 
 - IndexDB
 
-工程化
+### 工程化
 
-#### webpack 工作流程
-
-[webpack 工作流程](https://febook.hzfe.org/awesome-interview/book1/engineer-webpack-workflow)
+#### [webpack 工作流程](https://febook.hzfe.org/awesome-interview/book1/engineer-webpack-workflow)
 
 简易版：
 
@@ -194,28 +176,26 @@
 高级优化
 
 - souceMap
-
-对于源代码的映射，可以更准确的进行错误提示
+  
+  对于源代码的映射，可以更准确的进行错误提示
 
 - hotModuleReplacement
-
-热替换
+  
+  热替换
 
 - oneOf
-
-对于 rules 中的规则之匹配一次，不再重复多余的匹配
+  
+  对于 rules 中的规则之匹配一次，不再重复多余的匹配
 
 - treeShaking
-
-抖掉无用的模块
+  
+  抖掉无用的模块
 
 - codeSplit
+  
+  将代码分割，使得真个项目不打包成一个 js 文件，也能做到按需加载
 
-将代码分割，使得真个项目不打包成一个 js 文件，也能做到按需加载
-
-#### Babel 原理
-
-[Babel 原理](https://febook.hzfe.org/awesome-interview/book2/engineer-babel)
+#### [Babel 原理](https://febook.hzfe.org/awesome-interview/book2/engineer-babel)
 
 - code
 
@@ -227,39 +207,29 @@
 
 ### 框架
 
-#### [Vue初始化过程
+#### [Vue源码解读-初始化过程](https://juejin.cn/post/6950084496515399717#heading-11)
 
-[Vue初始化过程](https://juejin.cn/post/6950084496515399717#heading-11)
+#### [Vue源码解读-响应式原理](https://juejin.cn/post/6950826293923414047#heading-20)
 
-#### Vue响应式原理
+#### [Vue源码解读-异步更新](https://juejin.cn/post/6951568091893465102#heading-12)
 
-[Vue响应式原理](https://juejin.cn/post/6950826293923414047#heading-20)
+#### [Vue源码解读-全局API](https://juejin.cn/post/6952643167715852319#heading-14)
 
-#### Vue异步更新
+#### [Vue源码解读-实例方法](https://juejin.cn/post/6953503236254859294)
 
-[Vue异步更新](https://juejin.cn/post/6951568091893465102#heading-12)
-
-#### Vue全局API
-
-[Vue全局API](https://juejin.cn/post/6952643167715852319#heading-14)
-
-#### vue为什么不能检测数组的变化（索引方式）
-
-[vue为什么不能检测数组的变化（索引方式）](https://juejin.cn/post/6844904046722023438)
+#### [vue为什么不能检测数组的变化（索引方式）](https://juejin.cn/post/6844904046722023438)
 
 - Object.defineProperty
-
-- 不走 walk
+  
+  - 不走 walk
 
 - JavaScript 限制？
-
-- 性能代价与用户体验收益不成正比
+  
+  - 性能代价与用户体验收益不成正比
 
 - Proxy
 
-#### vue的数据绑定机制
-
-[vue的数据绑定机制](https://febook.hzfe.org/awesome-interview/book1/frame-vue-data-binding)
+#### [vue的数据绑定机制](https://febook.hzfe.org/awesome-interview/book1/frame-vue-data-binding)
 
 - Obsever
 - Compiler
@@ -267,29 +237,25 @@
 - Dep
 - 发布订阅者模式
 
-#### 常见框架的Diff算法
-
-[常见框架的Diff算法](https://febook.hzfe.org/awesome-interview/book3/frame-diff#2-vue2x-diff)
+#### [常见框架的Diff算法](https://febook.hzfe.org/awesome-interview/book3/frame-diff#2-vue2x-diff)
 
 - 同层级比较
-
-- text
-
-- children
+  
+  - text
+  
+  - children
 
 - 暴力
+  
+  - 前后对称、交叉对比
+  
+  - 双指针
+  
+  - key
+  
+  - 减少DOM操作
 
-- 前后对称、交叉对比
-
-- 双指针
-
-- key
-
-- 减少DOM操作
-
-#### 谈谈 React 和 Vue 的区别
-
-[谈谈 React 和 Vue 的区别](https://febook.hzfe.org/awesome-interview/book4/frame-react-vs-vue)
+#### [谈谈 React 和 Vue 的区别](https://febook.hzfe.org/awesome-interview/book4/frame-react-vs-vue)
 
 - 单向数据流 与 双向数据绑定
 - 数据驱动视图
@@ -297,15 +263,11 @@
 - JSX 与 模板语法
 - 拉模型 与 推模型
 
-#### vue2 源码总结
-
-[vue2 源码总结](https://juejin.cn/post/6973196579918315533)
+#### [vue2 源码总结](https://juejin.cn/post/6973196579918315533)
 
 ### 基础
 
-#### 闭包
-
-[闭包](https://xiaozhuanlan.com/advance/3294571608)
+#### [闭包](https://xiaozhuanlan.com/advance/3294571608)
 
 - 特殊对象
 
@@ -316,55 +278,43 @@
 - 变量生命周期延长
 
 - Scope
-
-- Global 
-
-- Script
-
-- Local
-
-- Closure
+  
+  - Global 
+  
+  - Script
+  
+  - Local
+  
+  - Closure
 
 - 模块化
 
 - 柯里化
 
-#### 闭包的作用和原理
+#### [闭包的作用和原理](https://febook.hzfe.org/awesome-interview/book1/js-closures)
 
-[闭包的作用和原理](https://febook.hzfe.org/awesome-interview/book1/js-closures)
-
-#### 前端模块化规范
-
-[前端模块化规范](https://febook.hzfe.org/awesome-interview/book1/js-module-specs)
+#### [前端模块化规范](https://febook.hzfe.org/awesome-interview/book1/js-module-specs)
 
 - ES6
 - CommonJS
 
-#### ES5、ES6 如何实现继承
-
-[ES5、ES6 如何实现继承](https://febook.hzfe.org/awesome-interview/book2/js-inherite)
+#### [ES5、ES6 如何实现继承](https://febook.hzfe.org/awesome-interview/book2/js-inherite)
 
 - 原型链继承
 - 构造函数继承
 - 组合继承
 - 寄生组合继承
 
-#### New 操作符的原理
-
-[New 操作符的原理](https://febook.hzfe.org/awesome-interview/book2/js-new)
+#### [New 操作符的原理](https://febook.hzfe.org/awesome-interview/book2/js-new)
 
 - 空对象
 - __proto__指向构造函数的原型
 - this 指向 空对象
 - 返回 对象、构造函数的返回值
 
-#### Javascript 异步编程
+#### [Javascript 异步编程](https://febook.hzfe.org/awesome-interview/book3/js-async)
 
-[Javascript 异步编程](https://febook.hzfe.org/awesome-interview/book3/js-async)
-
-#### TypeScript 中的 Interface 和 Type
-
-[TypeScript 中的 Interface 和 Type](https://febook.hzfe.org/awesome-interview/book3/js-ts-interface-type)
+#### [TypeScript 中的 Interface 和 Type](https://febook.hzfe.org/awesome-interview/book3/js-ts-interface-type)
 
 - 共同点
 
@@ -384,30 +334,20 @@
 
 - type 类型的别名，可以描述基础类型
 
-#### TypeScript 中的泛型
-
-[TypeScript 中的泛型](https://febook.hzfe.org/awesome-interview/book4/js-ts-generics#47-infer)
+#### [TypeScript 中的泛型](https://febook.hzfe.org/awesome-interview/book4/js-ts-generics#47-infer)
 
 - 将类型确定的工作延迟到执行的时候，而不是定义的时候
 - 扩展性
 
 ### 样式
 
-#### BFC
+#### [BFC](https://febook.hzfe.org/awesome-interview/book1/css-bfc)
 
-[BFC](https://febook.hzfe.org/awesome-interview/book1/css-bfc)
+#### [CSS 预处理器](https://febook.hzfe.org/awesome-interview/book2/css-preprocessor)
 
-#### CSS 预处理器
+#### [移动端自适应](https://febook.hzfe.org/awesome-interview/book3/css-mobile-adaptive)
 
-[CSS 预处理器](https://febook.hzfe.org/awesome-interview/book2/css-preprocessor)
-
-#### 移动端自适应
-
-[移动端自适应](https://febook.hzfe.org/awesome-interview/book3/css-mobile-adaptive)
-
-#### 水平垂直居中方案
-
-[水平垂直居中方案](https://febook.hzfe.org/awesome-interview/book4/css-vertical-horizontal-center)
+#### [水平垂直居中方案](https://febook.hzfe.org/awesome-interview/book4/css-vertical-horizontal-center)
 
 - 文本溢出
 
@@ -423,7 +363,7 @@
 
 ### 网络安全
 
-[网络安全](https://febook.hzfe.org/awesome-interview/book1/network-security)
+#### [网络安全](https://febook.hzfe.org/awesome-interview/book1/network-security)
 
 - XSS（跨站脚本攻击）
   
@@ -445,9 +385,7 @@
   
   - 数据劫持
 
-#### HTTP 缓存机制
-
-[HTTP 缓存机制](https://febook.hzfe.org/awesome-interview/book2/network-http-cache)
+#### [HTTP 缓存机制](https://febook.hzfe.org/awesome-interview/book2/network-http-cache)
 
 - 强制缓存
   
@@ -473,9 +411,7 @@
 
 - 不恰当的缓存，可能会导致数据不能及时更新
 
-#### HTTP/2 和 HTTP/1.1 的对比
-
-[HTTP/2 和 HTTP/1.1 的对比](https://febook.hzfe.org/awesome-interview/book3/network-http-1-2)
+#### [HTTP/2 和 HTTP/1.1 的对比](https://febook.hzfe.org/awesome-interview/book3/network-http-1-2)
 
 - HTTP 1
   
@@ -507,9 +443,7 @@
 
 ### 编码
 
-#### Promise
-
-[Promise](https://febook.hzfe.org/awesome-interview/book1/coding-promise)
+#### [Promise](https://febook.hzfe.org/awesome-interview/book1/coding-promise)
 
 ```js
 const pedding = "PEDDING";
@@ -650,9 +584,7 @@ MyPromise.resolve()
 // MyPromise.resolve(1).then(2).then(Promise.resolve(3)).then(console.log);
 ```
 
-#### 实现防抖节流函数
-
-[实现防抖节流函数](https://febook.hzfe.org/awesome-interview/book2/coding-throttle-debounce)
+#### [实现防抖节流函数](https://febook.hzfe.org/awesome-interview/book2/coding-throttle-debounce)
 
 ```js
 let fun;
@@ -700,9 +632,7 @@ fun();
 fun();
 ```
 
-#### 将列表还原为树状结构
-
-[将列表还原为树状结构](https://febook.hzfe.org/awesome-interview/book3/coding-arr-to-tree)
+#### [将列表还原为树状结构](https://febook.hzfe.org/awesome-interview/book3/coding-arr-to-tree)
 
 ```js
 const isBalanced = function (root) {
@@ -719,22 +649,17 @@ const height = function (root) {
 
   return ++Math.max(l, r);
 };
-
 ```
 
 ### 算法
 
-#### 平衡二叉树
-
-[平衡二叉树](https://febook.hzfe.org/awesome-interview/book1/algorithm-balanced-binary-trees)
+#### [平衡二叉树](https://febook.hzfe.org/awesome-interview/book1/algorithm-balanced-binary-trees)
 
 - 后序遍历
 
 ### 综合
 
-#### 浏览器从输入网址到页面展示的过程
-
-[浏览器从输入网址到页面展示的过程](https://febook.hzfe.org/awesome-interview/book1/topic-enter-url-display-xx)
+#### [浏览器从输入网址到页面展示的过程](https://febook.hzfe.org/awesome-interview/book1/topic-enter-url-display-xx)
 
 - url 解析
 
@@ -766,10 +691,6 @@ const height = function (root) {
 
 Https 在 TCP 和 HTTP 之间加了一层协议，进行加密以及认证。
 
-#### 多图站点性能优化
+#### [多图站点性能优化](https://febook.hzfe.org/awesome-interview/book2/topic-multi-pics-site-optimize)
 
-[多图站点性能优化](https://febook.hzfe.org/awesome-interview/book2/topic-multi-pics-site-optimize)
-
-#### 如何减少白屏的时间
-
-[如何减少白屏的时间](https://febook.hzfe.org/awesome-interview/book3/topic-white-screen-optimization)
+#### [如何减少白屏的时间](https://febook.hzfe.org/awesome-interview/book3/topic-white-screen-optimization)
