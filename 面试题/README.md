@@ -217,6 +217,14 @@
 
 #### [Vue源码解读-实例方法](https://juejin.cn/post/6953503236254859294)
 
+#### [Vue源码解读-Hook Event](https://juejin.cn/post/6954923081462710309)
+
+#### [Vue源码解读-编译器之解析（上）](https://juejin.cn/post/6959019076983209992)
+
+#### [Vue源码解读-编译器之优化](https://juejin.cn/post/6960465810682806308)
+
+#### [Vue源码解读-编译器之解析（下）](https://juejin.cn/post/6959019174215548935)
+
 #### [vue为什么不能检测数组的变化（索引方式）](https://juejin.cn/post/6844904046722023438)
 
 - Object.defineProperty
