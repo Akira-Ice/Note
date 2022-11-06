@@ -400,6 +400,50 @@ express 中需要对其做特殊的配置。
   
   `app.use(express.json())`
 
+- form-data
+  
+  `yarn add connect-multiparty`
+  
+  ```js
+  const multipartyMid = multipart();
+  const router = express.Router();
+  
+  router.post("/register", multipartyMid, userCtrl.register);
+  ```
+
+### 本地接口跑不通
+
+🤔发现问题
+
+  ERROR: getaddrinfo ENOTFOUND loaclhost 
+
+🙅‍♂️拒绝妥协，坚持解决
+
+  localhost -> 127.0.0.1
+
+### express-jwt 运行报错
+
+🤔发现问题
+
+  TypeError: expressJWT is not a function
+
+🙅‍♂️拒绝妥协，坚持解决
+
+  版本问题，7.xx.xx 以上导包改了，降低版本即可
+
+  要记得 option 中需要 `algorithms`
+
+```js
+app.use(
+  expressJWT({
+    secret: secretKey,
+    algorithms: ["HS256"],
+  }).unless({
+    path: ["/user/login", "/user/register"],
+  })
+);
+```
+
 ---
 
 [随机ACG壁纸 @toubiec](https://acg.toubiec.cn/random.php)
