@@ -57,7 +57,7 @@ setState 是合并不是替换。可以通过定时器摆脱 react 的控制。
 
 setState 若要依赖当前数据，可以通过函数式进行操作。
 
-setState((state) => {})
+- setState((state) => {})
 
 setState 生命周期：
 

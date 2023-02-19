@@ -14,6 +14,38 @@
 
   给 @blur 加个 setTimeout 让其延后执行即可。
 
+### Vue3
+
+#### reactive对象再次赋值，失去响应式
+
+🤔发现问题
+
+  `const Akira = reactive({ a:1 });`
+
+  `Akira = { a:2 };`
+
+  后续响应式丢失。
+
+🙅‍♂️拒绝妥协，坚持解决
+
+响应式丢失，主要是因为引用数据存储，是按照引用地址存储的，直接赋值会导致，地址发生变化，从而响应式丢失。
+
+- 改用 ref
+
+- 在外层在套一层
+  
+  `const state = reactive({ Akira: { a:1 } });`
+
+#### VueRouter 传递 state 参数无效
+
+🤔发现问题
+
+`Error with push/replace State DOMException: Failed to execute 'pushState' on 'History': <Object> could not be cloned.`
+
+🙅‍♂️拒绝妥协，坚持解决
+
+这里的报错原因，可能是因为传递的 state 参数对象类型出现了问题。在 Vue3 中数据大多为 proxy 对象，需要通过 toRaw 将其转换为普通对象类型。
+
 ### vuex
 
 #### vuex数据持久
@@ -27,7 +59,6 @@
 - [vuex-persistedstate](https://www.npmjs.com/package/vuex-persistedstate)
 - [vuex-persist](https://www.npmjs.com/package/vuex-persist)
 - localStorage
-- 
 
 ## NPM & yarn
 
@@ -35,15 +66,16 @@
 
 ### 常用命令
 
-| Command                      | Description  |
-|:---------------------------- |:------------ |
-| npm view packageName version | 查看包的可安装版本    |
-| npm init -y \|               | yarn init -y |
-| npm i xxx -d \|              | yarn add     |
-| npm i xxx -s \|              | yarn         |
-| npm i xxx -g                 | 全局安装依赖       |
-| npm i xxx --force            | 忽略上游冲突，覆盖依赖  |
+| Command                      | Description              |
+| :--------------------------- | :----------------------- |
+| npm view packageName version | 查看包的可安装版本       |
+| npm init -y \|               | yarn init -y             |
+| npm i xxx -d \|              | yarn add                 |
+| npm i xxx -s \|              | yarn                     |
+| npm i xxx -g                 | 全局安装依赖             |
+| npm i xxx --force            | 忽略上游冲突，覆盖依赖   |
 | npm i xxx --legacy-peer-deps | 忽略上游冲突，不覆盖依赖 |
+| *npm* config get prefix      | 查看全局安装路径         |
 
 ### 快速清除 node_modules
 
@@ -337,11 +369,11 @@ module.exports.raw = true;
 }
 ```
 
-## git
+## NodeJS
 
----
+### git
 
-### git出现文件夹后面跟@+数字
+#### git出现文件夹后面跟@+数字
 
 🤔发现问题
 
@@ -359,20 +391,20 @@ module.exports.raw = true;
 
   `git rm -r --cached .`
 
-## express
+### express
 
 ---
 
-### 状态码
+#### 状态码
 
-| code | description   |
-|:----:|:-------------:|
-| 500  | Server error  |
-| 422  | 客户端错误，数据校验不通过 |
-| 200  | success       |
-| 304  | no modify     |
+| code | description  |
+|:----:|:------------:|
+| 500  | Server error |
+| 422  | Cilent error |
+| 200  | success      |
+| 304  | no modify    |
 
-### express + mongoDB 接口
+#### express + mongoDB 接口
 
 🙇‍♂️Flow
 
@@ -382,7 +414,7 @@ module.exports.raw = true;
 
 - router -> 配置路由 -> controller -> 控制层，逻辑实现
 
-### 解析表单请求体
+#### 解析表单请求体
 
 🤔发现问题
 
@@ -411,7 +443,7 @@ express 中需要对其做特殊的配置。
   router.post("/register", multipartyMid, userCtrl.register);
   ```
 
-### 本地接口跑不通
+#### 本地接口跑不通
 
 🤔发现问题
 
@@ -421,7 +453,7 @@ express 中需要对其做特殊的配置。
 
   localhost -> 127.0.0.1
 
-### express-jwt 运行报错
+#### express-jwt 运行报错
 
 🤔发现问题
 
@@ -443,6 +475,26 @@ app.use(
   })
 );
 ```
+
+#### get 请求 query 传递数组
+
+🤔发现问题
+
+   `[get] http://localhost/user?arr=[1,2,3]` -> [404 Bad Request]
+
+🙅‍♂️拒绝妥协，坚持解决
+
+`[]`在URL 中属于功能性字符，需要采用`decodeURIComponent()`进行转义，或者采用一下方式传递。
+
+- `[get] http://localhost/user?arr=1&arr=2`
+
+- `[get] http://localhost/user?arr[0]=1&arr[1]=2`
+
+- `[get] http://localhost/user?arr[]=1&arr[]=2`
+
+- `[get] http://localhost/user?arr=1,2`
+
+
 
 ---
 
